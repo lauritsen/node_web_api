@@ -1,5 +1,7 @@
 # node_web_api
 
+Following **RESTful Web Services with Node.js and Express** course on Pluralsight
+
 ## Project setup
 
 ```
