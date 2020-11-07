@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 
 function routes(Book) {
   const bookRouter = express.Router();
   bookRouter
-    .route("/books")
+    .route('/books')
     .post((req, res) => {
       const book = new Book(req.body);
 
@@ -22,7 +22,7 @@ function routes(Book) {
         return res.json(books);
       });
     });
-  bookRouter.use("/books/:bookId", (req, res, next) => {
+  bookRouter.use('/books/:bookId', (req, res, next) => {
     Book.findById(req.params.bookId, (err, book) => {
       if (err) {
         return res.send(err);
@@ -35,8 +35,8 @@ function routes(Book) {
     });
   });
   bookRouter
-    .route("/books/:bookId")
-    .get((req, res) => res.json(req.body))
+    .route('/books/:bookId')
+    .get((req, res) => res.json(req.book))
     .put((req, res) => {
       const { book } = req;
       book.title = req.body.title;
