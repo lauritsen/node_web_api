@@ -1,13 +1,15 @@
 # node_web_api
 
-Project setup
+## Project setup
+
 ```
 npm init
 npm install express
 npm install nodemon
 ```
 
-Nodemon config
+## Nodemon config
+
 ```
 "nodemonConfig": {
   "restartable": "rs",
@@ -20,4 +22,12 @@ Nodemon config
     "PORT": 4000
   }
 }
+```
+
+## Data import
+
+To import data into your mongoDB database run the following in cmd.
+
+```
+mongo bookApi < booksJson.js
 ```
